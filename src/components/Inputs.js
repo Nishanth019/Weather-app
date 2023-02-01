@@ -33,12 +33,12 @@ export default function Inputs({setQuery , units , setUnits}) {
   }
 
   return (
-    <div className="flex flex-row justify-center ">
+    <div className="flex flex-row justify-center abcd1">
         <div className="flex flex-row justify-center items-center  space-x-4">
             <input type="text"  onKeyDown={handleKeyDown} value={city} onChange={(e)=>setCity(e.target.value)} placeholder="search for city..." className="text-md  font-light p-2 focus:outline-none capitalize placeholder:lowercase w-3/4 rounded-md" />
-            <UilSearch onClick={handleSearch} size={25} className="text-white cursor-pointer transition ease-out hover:scale-125"/>
-            <UilLocationPoint onClick={handleLocation} size={25} className="text-white cursor-pointer transition ease-out hover:scale-125"/>
-            <div className="flex flex-row w-1/4 items-center justify-center">
+            <UilSearch onClick={handleSearch} size={25} className="search text-white cursor-pointer transition ease-out hover:scale-125"/>
+            <UilLocationPoint onClick={handleLocation} size={25} className="location text-white cursor-pointer transition ease-out hover:scale-125"/>
+            <div className="units flex flex-row w-1/4 items-center justify-center">
                 <button onClick={handleUnitsChange} name="metric" className="text-white text-lg font-medium text-white cursor-pointer transition ease-out hover:scale-125">°C</button>
                 <div className="m-1 mb-2 text-white">|</div>
                 <button  onClick={handleUnitsChange}  name="imperial" className="text-white text-lg font-medium text-white cursor-pointer transition ease-out hover:scale-125">°F</button>

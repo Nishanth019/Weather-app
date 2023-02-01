@@ -6,31 +6,31 @@ export default function TemperatureAndDetails({weather:{
 }}) {
     return (
         <>
-            <div className="flex items-center justify-center py-5 text-xl text-white font-medium">
+            <div className=" details flex items-center justify-center py-5 text-xl text-white font-medium">
                 <p>{details}</p>
             </div>
-            <div className="flex items-center justify-between py-3 text-white">
-                <img src={iconUrlFromCode(icon)} alt="sunny" className="w-20" />
-                <p className="text-5xl">{`${temp.toFixed()}°`}</p>
+            <div className="temp flex items-center justify-between py-3 text-white">
+                <img  src={iconUrlFromCode(icon)} alt="sunny" className="w-20 img" />
+                <p  className="temp1 text-5xl">{`${temp.toFixed()}°`}</p>
                 <div className="flex flex-col space-y-2">
-                    <div className="flex font-light text-sm items-center justify-center">
-                        <UilTemperature size={18} className="mr-1" />
+                     <div className=" measure flex font-light text-sm items-center justify-center">
+                        <UilTemperature  size={18} className="sym mr-1" />
                         Real fell:
-                        <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
+                        <span className="measure font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
                     </div>
-                    <div className="flex font-light text-sm items-center justify-center">
-                        <UilTear size={18} className="mr-1" />
+                    <div className=" measure flex font-light text-sm items-center justify-center">
+                        <UilTear size={18} className=" sym mr-1" />
                         Humidity:
-                        <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
+                        <span className="measure font-medium ml-1">{`${humidity.toFixed()}%`}</span>
                     </div>
-                    <div className="flex font-light text-sm items-center justify-center">
-                        <UilWind size={18} className="mr-1" />
+                    <div className="flex measure font-light text-sm items-center justify-center">
+                        <UilWind size={18} className="sym mr-1" />
                         Wind:
-                        <span className="font-medium ml-1">1{`${speed.toFixed()} km/h`}</span>
+                        <span className="measure font-medium ml-1">1{`${speed.toFixed()} km/h`}</span>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row justify-center align-center space-x-2 text-white text-sm py-3 mt-5">
+            <div className="measure1 flex flex-row justify-center align-center space-x-2 text-white text-sm py-3 mt-5">
             Latitude:
             <p className="font-light">
                <span className="font-medium ml-1">{`${lat.toFixed()}°`}</span>

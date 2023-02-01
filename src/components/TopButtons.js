@@ -23,10 +23,11 @@ export default function TopButtons({setQuery}) {
         }
     ]
   return (
-        <div className="flex items-center justify-around mt-6 mb-7 pt-6  ">
+        <div className="Tb flex items-center justify-around mt-6 mb-7 pt-6  ">
             {
                 cities.map((city)=>(
-                    <button  key={city.id} onClick={()=>setQuery({q:city.title})} className="text-white text-lg font-medium hover:text-sky-400  ">{city.title}</button>
+                    
+                    <button  key={city.id} onClick={()=>setQuery({q:city.title})} className="text-white text-lg font-medium hover:text-sky-400 abcd ">{city.title}</button>
                 ))
             }
         </div>

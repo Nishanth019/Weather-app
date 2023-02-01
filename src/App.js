@@ -1,5 +1,6 @@
 import React from 'react';
 import "./App.css"
+
 import { useState, useEffect } from 'react';
 import UilReact from '@iconscout/react-unicons/icons/uil-react'
 import TopButtons from './components/TopButtons';
@@ -24,17 +25,19 @@ function App() {
 
   return (
     <>
-      <div className="bg">
+    
+      {/* <div className="bg">
         <div className="bg-gradient-to-r from-green-400 via-yellow-500 to-red-500 h-screen w-screen absolute z-0"></div>
-      </div>
-      <div className=" cn  mx-auto max-w-screen-md my-10 px-32 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  h-fit shadow-xl shadow-grey-400 pb-2">
+      </div> */}
+      <div className=" cn   px-32 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500   shadow-xl shadow-grey-400 pb-2 border border-green-900">
+        
         <div className="header pt-2">
           <div className="flex items-center justify-center my-6 ">
             <UilReact size={50} className="text-white text-4xl font-medium" />
             <p className="text-white text-4xl font-medium"> Weather App</p>
           </div>
         </div>
-        <TopButtons setQuery={setQuery} />
+        <TopButtons  setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && <div>
           <Location weather={weather} />
